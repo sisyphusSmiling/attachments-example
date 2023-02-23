@@ -14,10 +14,6 @@
 		"emulator-account": {
 			"address": "f8d6e0586b0a20c7",
 			"key": "83c4da8100a5bb0086fd0835e0b48dbdf507ca4aa15dab56edccee06c82eb110"
-		},
-		"victim": {
-			"address": "179b6b1cb6755e31",
-			"key": "5b65647d4d5d0127e2a465dc7f2bdca3c9dddbbd6793f08dc1bee6d469991d60"
 		}
 	},
 	"deployments": {
